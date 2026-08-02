@@ -1,0 +1,48 @@
+body {
+    background-image: url('img/back.png');
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    margin: 0;
+    height: 100vh;
+}
+
+.title-bar {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+
+    padding: 18px 28px;
+
+    border-radius: 16px;
+
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+
+    text-align: left;
+
+    z-index: 999;
+
+    overflow: hidden;
+}
+
+.title-bar h1 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.title-bar p {
+    margin: 6px 0 0 0;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 15px;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
