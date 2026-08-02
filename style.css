@@ -1,12 +1,26 @@
 body {
-    background-image: url('img/back.png');
-    background-size: cover;
-    background-position: center bottom;
-    background-repeat: no-repeat;
     margin: 0;
     height: 100vh;
 }
-
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('img/back-desktop.png');
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+@media (max-width: 768px) {
+    body::before {
+        background-image: url('img/back-mobile.png');
+    }
+}
+/*=============================================================*/
 .title-bar {
     position: fixed;
     top: 20px;
@@ -45,4 +59,48 @@ body {
     color: rgba(255, 255, 255, 0.85);
     font-size: 15px;
     text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+/*=============================================================*/
+.tile-container {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 100px auto 0;
+    grid-template-columns: 1fr;
+}
+
+.tile {
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 30px 20px;
+    color: white;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tile:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+.tile h3 {
+    margin: 0 0 10px 0;
+    font-size: 22px;
+}
+.tile p {
+    margin: 0;
+    opacity: 0.8;
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    .tile-container {
+        grid-template-columns: 1fr 1fr;
+    }
 }
