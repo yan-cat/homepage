@@ -1,0 +1,27 @@
+.site-footer {
+    margin-top: 60px;
+    margin-bottom: 20px;
+    margin-left: 80px;
+    margin-right: 80px;
+    border-radius: 30px;
+
+    padding: 6px 28px;
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    text-align: center;
+    color: #ffffff;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 768px) {
+    .site-footer {
+        margin-top: 60px;
+        margin-bottom: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        border-radius: 0px;
+    }
+}
