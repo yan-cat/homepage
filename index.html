@@ -4,34 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <title> 猫小炎的个人主页 </title>
-    <script src="components/load-css.js"></script>
+    <script src="css/load-css.js"></script>
+    <script type="module" src="js/load-js.js"></script>
 </head>
-<body>
-    <div id="header-placeholder"></div>
-    <main>
-        <div class="tile-container">
-            <div class="glass-card tile tile-full-width flex-row text-content">
-               <img src="img/profile.png" alt="猫小炎">
-               <p>一串自我介绍</p>
+    <body>
+        <div id="header-placeholder"></div>
+        <main>
+            <div class="tile-container">
+                <div class="glass-card tile tile-full-width text-content">
+                    <img src="img/profile.png" alt="猫小炎">
+                    <p><br>猫小炎，一只10后猫猫......<br>不会写了qwq</p>
+                </div>
+                <div class="glass-card tile">
+                    <h3>我的链接</h3>
+                    <a href="https://space.bilibili.com/3493115923008228" class="btn newpage">Bilibili</a>
+                    <a href="https://github.com/yan-cat" class="btn newpage">Github</a>
+                    <a href="mailto:yancat.top@icloud.com" class="btn">邮件</a>
+                </div>
+                <div class="glass-card tile" style="text-align: center">
+                    <h3>关于</h3>
+                    <p style="text-align: center">初学者，第一次写的网页可能不太好看或者有bug，可以联系我反馈</p>
+                </div>
             </div>
-            <div class="glass-card tile">
-                <h3>首页施工中</h3>
-                <p>还在摸鱼</p>
-            </div>
-            <div class="glass-card tile">
-                <h3>信息</h3>
-                <p>看什么呢，还在施工</p>
-            </div>
-        </div>
-    </main>
-    <div id="footer-placeholder"></div>
-    <script>
-        fetch('/components/header.html')
-            .then(r => r.text())
-            .then(html => document.getElementById('header-placeholder').innerHTML = html);
-        fetch('/components/footer.html')
-            .then(r => r.text())
-            .then(html => document.getElementById('footer-placeholder').innerHTML = html);
-    </script>
-</body>
+        </main>
+        <div id="footer-placeholder"></div>
+        <script>
+            fetch('/components/header.html')
+                .then(r => r.text())
+                .then(html => document.getElementById('header-placeholder').innerHTML = html);
+            fetch('/components/footer.html')
+                .then(r => r.text())
+                .then(html => document.getElementById('footer-placeholder').innerHTML = html);
+        </script>
+    </body>
 </html>

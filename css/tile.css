@@ -34,11 +34,15 @@
     margin: 0;
     opacity: 0.8;
     font-size: 18xpx;
+    word-break: break-word;
+    overflow-wrap: break-word;
 }
 .tile img {
     border-radius: 50%;
     width: 10%;
     height: auto;
+    display: block;
+    margin: 0 auto;
 }
 @media (max-width: 768px) {
     .tile-container {
@@ -46,7 +50,5 @@
     }
     .tile img {
         width: 50%;
-        display: block;
-        margin: 0 auto;
     }
 }
